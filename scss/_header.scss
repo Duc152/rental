@@ -1,0 +1,137 @@
+@use "vars" as *;
+
+/* ====================================================
+Header
+==================================================== */
+#header {
+	.header-logo {
+
+	}
+
+	.header-nav {
+		@include mq(tb) {
+			display: none;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			height: 100vh;
+			padding: 60px 20px 0;
+			overflow-y: scroll;
+			&.active {
+				display: block;
+			}
+		}
+
+		&__menu {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: flex-end;
+			@include mq(tb) {
+				display: block;
+			}
+
+			&-item {
+				padding: 11px 17px;
+				position: relative;
+				@include mq(tb) {
+					border-bottom: 1px solid #ccc;
+				}
+
+				> a {
+					display: block;
+					@include font-size(14);
+					font-weight: bold;
+					color: black;
+					padding: 0 0;
+					@include mq(tb) {
+						text-align: center;
+						position: relative;
+					}
+				}
+			}
+		}
+	}
+
+	.js-mobile {
+		width: 26px;
+		height: 30px;
+		position: absolute;
+		right: 20px;
+		@include v-align;
+		cursor: pointer;
+		z-index: 12;
+		display: none;
+		@include mq(tb) {
+			display: block;
+		}
+
+		span {
+			position: absolute;
+			@include v-align;
+			display: block;
+			width: 100%;
+			height: 2px;
+			background: #333;
+			border-radius: 3px;
+
+			&:before, &:after {
+				position: absolute;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: #333;
+				content: '';
+				-webkit-transition: -webkit-transform 0.3s;
+				transition: transform 0.3s;
+				border-radius: 3px;
+			}
+
+			&:before {
+				-webkit-transform: translateY(-250%);
+				transform: translateY(-250%);
+				top: -6px;
+			}
+
+			&:after {
+				-webkit-transform: translateY(250%);
+				transform: translateY(250%);
+				bottom: -6px;
+			}
+		}
+
+		&--close {
+			span {
+				background-color: transparent;
+
+				&:before, &:after {
+					width: 100%;
+					background: #333;
+				}
+
+				&:before {
+					-webkit-transform: translateY(0) rotate(45deg);
+					transform: translateY(0) rotate(45deg);
+					top: 2px;
+				}
+
+				&:after {
+					-webkit-transform: translateY(0) rotate(-45deg);
+					transform: translateY(0) rotate(-45deg);
+					bottom: -2px;
+				}
+			}
+		}
+	}
+}
+
+
+.js-locked {
+	overflow: hidden;
+	-ms-touch-action: none;
+	touch-action: none;
+
+	body {
+		-webkit-overflow-scrolling: auto;
+	}
+}

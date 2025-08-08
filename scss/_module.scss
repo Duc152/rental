@@ -1,0 +1,193 @@
+@use "vars" as *;
+
+/* ====================================================
+Layout
+==================================================== */
+//.wrapper {
+//	padding-top: 115px;
+//	@include mq(tb){
+//		padding-top: 70px;
+//	}
+//}
+
+.inner {
+	display: block;
+	max-width: 1030px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+
+//form input
+.form-control {
+	display: block;
+	width: 100%;
+	height: 45px;
+	background: white;
+	border: 1px solid #ccc;
+	font-weight: 500;
+	padding: 5px 10px;
+	@include font-size(15);
+
+	&:focus {
+		border-color: #66afe9;
+		outline: 0;
+		-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+		box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+	}
+}
+
+//HTML CSS radio end check box
+
+//<ul class="pure-list">
+//	<li>
+//		<div class="pure-list__input">
+//			<input name="radio" type="radio" class="radio" checked="checked">
+//			<span>Option 1</span>
+//		</div>
+//	</li>
+//
+//	<li>
+//		<div class="pure-list__input">
+//			<input name="radio" type="radio" class="radio">
+//			<span>Option 1</span>
+//		</div>
+//	</li>
+//
+//	<li>
+//		<div class="pure-list__input">
+//			<input name="checkbox" type="checkbox" checked="checked">
+//			<span>Choice A</span>
+//		</div>
+//	</li>
+//
+//	<li>
+//		<div class="pure-list__input">
+//			<input name="checkbox" type="checkbox">
+//			<span>Choice B</span>
+//		</div>
+//	</li>
+//</ul>
+
+//radio end check box
+.pure-list {
+	&__input {
+		position: relative;
+
+		input {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 1;
+			opacity: 0;
+			cursor: pointer;
+
+			&[type="checkbox"] {
+				& + span {
+					&:after {
+						background-color: transparent;
+						top: 50%;
+						left: 4px;
+						width: 8px;
+						height: 3px;
+						margin-top: -4px;
+						border-style: solid;
+						border-color: #ffffff;
+						border-width: 0 0 3px 3px;
+						border-image: none;
+						transform: rotate(-45deg) scale(0);
+					}
+				}
+
+				&:checked {
+					& + span {
+						&:after {
+							content: '';
+							transform: rotate(-45deg) scale(1);
+							transition: transform 200ms ease-out;
+						}
+
+						&:before {
+							animation: borderscale 200ms ease-in;
+							background: #4F8196;
+						}
+					}
+				}
+			}
+
+			&[type="radio"] {
+				+ span {
+					&:after, &:before {
+						border-radius: 50%;
+					}
+				}
+
+				&:checked {
+					& + span {
+						&:before {
+							animation: borderscale 300ms ease-in;
+							background-color: white;
+						}
+
+						&:after {
+							transform: scale(1);
+						}
+					}
+				}
+			}
+		}
+
+		span {
+			display: block;
+			position: relative;
+			padding: 10px 0 10px 40px;
+			vertical-align: middle;
+			user-select: none;
+			cursor: pointer;
+
+			&:before {
+				box-sizing: content-box;
+				content: '';
+				color: #4F8196;
+				position: absolute;
+				top: 50%;
+				left: 0;
+				width: 14px;
+				height: 14px;
+				margin-top: -9px;
+				border: 2px solid #4F8196;
+				text-align: center;
+				transition: all 0.4s ease;
+			}
+
+			&:after {
+				box-sizing: content-box;
+				content: '';
+				background-color: #4F8196;
+				position: absolute;
+				top: 50%;
+				left: 4px;
+				width: 10px;
+				height: 10px;
+				margin-top: -5px;
+				transform: scale(0);
+				transform-origin: 50%;
+				transition: transform 200ms ease-out;
+			}
+		}
+	}
+}
+
+
+//navigation
+//<div class="nums-page">
+//	<div class='wp-pagenavi' role='navigation'>
+//		<a class="prevtpostslink" rel="next" aria-label="Prev Page" href="">Prev</a>
+//		<span aria-current='page' class='current'>1</span>
+//		<a class="page larger" title="Page 2" href="">2</a>
+//		<a class="page larger" title="Page 3" href="">3</a>
+//		<a class="nextpostslink" rel="next" aria-label="Next Page" href="">Next</a>
+//	</div>
+//</div>

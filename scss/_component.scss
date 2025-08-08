@@ -1,0 +1,151 @@
+@use "vars" as *;
+
+/* ====================================================
+Control
+==================================================== */
+.c-fc { //font-color
+	&--white {
+		color: white !important;
+	}
+}
+
+
+.c-ft { //font-family
+	&--jp {
+		font-family: $font-jp;
+	}
+
+	// &--en {
+	// 	font-family: $font-en;
+	// }
+}
+
+
+.c-fw { //font-weight
+	&--lt {
+		font-weight: 300 !important
+	}
+
+	&--rg {
+		font-weight: 400 !important
+	}
+
+	&--md {
+		font-weight: 500 !important
+	}
+
+	&--sbd {
+		font-weight: 600 !important
+	}
+
+	&--bd {
+		font-weight: 700 !important
+	}
+
+	&--bk {
+		font-weight: 900 !important
+	}
+}
+
+
+.c-tx--v { //Vertical writing
+	//display: inline-block;
+	-ms-writing-mode: tb-rl;
+	writing-mode: vertical-rl;
+
+	&-pc {
+		@include mq(md-min) {
+			-ms-writing-mode: tb-rl;
+			writing-mode: vertical-rl;
+		}
+	}
+}
+
+
+.c-al { //text-align
+	&--c {
+		text-align: center !important
+	}
+
+	&--r {
+		text-align: right !important
+	}
+
+	&--l {
+		text-align: left !important
+	}
+}
+
+
+.c-val { //vertical-align
+	&--md {
+		vertical-align: middle
+	}
+
+	&--top {
+		vertical-align: top
+	}
+}
+
+
+/* ====================================================
+Component
+==================================================== */
+// Common Text style
+.c-txt {
+	&__basic {
+
+	}
+}
+
+
+//ttl
+.c-ttl {
+	&__01 {
+
+	}
+
+}
+
+//btn
+.c-btn {
+	&__01 {
+		appearance: none;
+		@include flex(center, center);
+		width: 100%;
+		max-width: 232px;
+		height: 52px;
+		background: #CC7B22;
+		color: white;
+		border: 0;
+		border-radius: 8px;
+		font-family: $font-jp;
+		font-weight: bold;
+		@include font-size(16);
+		margin: 0 auto;
+		transition: 0.3s ease;
+		cursor: pointer;
+		@include mq {
+			border-radius: 50px;
+		}
+		&:hover {
+			background: #9A5C1A;
+		}
+		&:focus {
+			background: #673E11;
+		}
+	}
+}
+
+
+//fade up
+.js-scrollin {
+	opacity: 0;
+	transform: translate(0, 70px);
+
+	&.active {
+		opacity: 1;
+		transform: translate(0, 0);
+		transition: 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	}
+}
