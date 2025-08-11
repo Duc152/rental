@@ -749,6 +749,17 @@ Layout
 			@include h-align;
 		}
 	}
+	.c-btn__01 {
+		max-width: 192px;
+		@include mq(md-min) {
+			position: absolute;
+			top: -9px;
+			right: 4px;
+		}
+		@include mq {
+			margin-top: 16px;
+		}
+	}
 }
 
 .wp-pagination {
