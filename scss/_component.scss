@@ -145,6 +145,7 @@ Component
 	&__01 {
 		appearance: none;
 		@include flex(center, center);
+		gap: 10px;
 		width: 100%;
 		max-width: 232px;
 		height: 52px;

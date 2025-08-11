@@ -749,15 +749,32 @@ Layout
 			@include h-align;
 		}
 	}
-	.c-btn__01 {
-		max-width: 192px;
+	&__btn {
+		@include flex();
+		gap: 16px;
+		width: 100%;
+		max-width: 400px;
 		@include mq(md-min) {
 			position: absolute;
 			top: -9px;
 			right: 4px;
+			@include mq(xxl) {
+				&:has(.c-btn__01--white) {
+					position: relative;
+					top: 0;
+					right: 0;
+					margin: 16px auto;
+				}
+			}
 		}
 		@include mq {
-			margin-top: 16px;
+			margin: 16px auto 0;
+		}
+		.c-btn__01 {
+			max-width: 192px;
+			@include mq(md-min) {
+				margin-right: 0;
+			}
 		}
 	}
 }

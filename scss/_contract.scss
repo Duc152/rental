@@ -124,6 +124,12 @@
 			&:first-child {
 				border-top: 1px solid #E0E0E0;
 			}
+			&:not(.contract-list__item--top) {
+				&:hover {
+					opacity: 1;
+					background: #FFF5EA;
+				}
+			}
 		}
 		@include mq {
 			position: relative;
