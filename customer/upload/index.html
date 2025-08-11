@@ -4,8 +4,8 @@
 		<meta charset="utf-8">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
-		<title>Information</title>
-		<meta name="description" content="Information">
+		<title>Upload</title>
+		<meta name="description" content="Upload">
 		<meta name="format-detection" content="telephone=no">
 		<link rel="shortcut icon" href="../../favicon.ico">
 		<link type="text/css" rel="stylesheet" href="../../js/slick/slick-theme.css">
@@ -23,7 +23,7 @@
 							<img width="15" class="off" src="../../img/common/icon-contract-active.svg" alt="契約管理">
 						</div> 契約管理
 					</a>
-					<a href="/customer/" class="active">
+					<a href="/customer/">
 						<div class="icon">
 							<img width="20" class="show" src="../../img/common/icon-management.svg" alt="顧客管理">
 							<img width="20" class="off" src="../../img/common/icon-management-active.svg" alt="顧客管理">
@@ -190,7 +190,7 @@
 				</ul>
 			</div>
 		</div>
-		<main id="page-customer_information" class="wrapper">
+		<main id="page-customer_upload" class="wrapper">
 			<div class="breadcrumb">
 				<div class="inner">
 					<span><span><a href="/">契約一覧</a></span><span>詳細情報</span></span>
@@ -207,44 +207,78 @@
 					</div>
 					<div class="customer-content">
 						<div class="customer-content__ct">
-							<ul class="information-list">
-								<li class="information-list__item">
-									<p class="information-list__ttl">契約ID</p>
-									<p class="information-list__txt">A002</p>
-								</li>
-								<li class="information-list__item">
-									<p class="information-list__ttl">顧客種別</p>
-									<p class="information-list__txt">オーナー</p>
-								</li>
-								<li class="information-list__item">
-									<p class="information-list__ttl">氏名</p>
-									<p class="information-list__txt">エナジーハウス　合同会社　代表社員　岡村勝正</p>
-								</li>
-								<li class="information-list__item">
-									<p class="information-list__ttl">氏名（ｶﾅ）</p>
-									<p class="information-list__txt">ｴﾅｼﾞｰﾊｳｽ ｺﾞｳﾄﾞｳｶﾞｲｼｬ ﾀﾞｲﾋｮｳｼｬｲﾝ ｵｶﾑﾗｶﾂﾏｻ</p>
-								</li>
-								<li class="information-list__item">
-									<p class="information-list__ttl">区分</p>
-									<p class="information-list__txt">法人</p>
-								</li>
-								<li class="information-list__item">
-									<p class="information-list__ttl">郵便番号</p>
-									<p class="information-list__txt">530-0047</p>
-								</li>
-								<li class="information-list__item">
-									<p class="information-list__ttl">住所</p>
-									<p class="information-list__txt">大阪府大阪市北区西天満3丁目６－８</p>
-								</li>
-								<li class="information-list__item">
-									<p class="information-list__ttl">電話番号</p>
-									<p class="information-list__txt">-</p>
-								</li>
-								<li class="information-list__item">
-									<p class="information-list__ttl">メールアドレス</p>
-									<p class="information-list__txt">sample@example.com</p>
-								</li>
-							</ul>
+							<div class="contract-block__control">
+								<div class="contract-block__control-select custom-select">
+									<select class="situation">
+										<option>状況</option>
+										<option value="契約中">契約中</option>
+										<option value="契約終了">契約終了</option>
+									</select>
+								</div>
+								<div class="contract-block__control-select custom-select">
+									<select class="pdf">
+										<option>PDF有無</option>
+										<option value="あり">あり</option>
+										<option value="なし">なし</option>
+									</select>
+								</div>
+								<form class="contract-block__control-search">
+									<input type="text" placeholder="キーワード検索" name="search">
+									<span class="clear-txt"></span>
+									<button type="submit"></button>
+								</form>
+							</div>
+							<div class="contract-list contract-list--hiddenid">
+								<div class="contract-list__item contract-list__item--top">
+									<div class="contract-list__sub">契約ID</div>
+									<div class="contract-list__sub">物件名</div>
+									<div class="contract-list__sub">部屋番号</div>
+									<div class="contract-list__sub">契約者名</div>
+									<div class="contract-list__sub">所有者名</div>
+									<div class="contract-list__sub">契約始期</div>
+									<div class="contract-list__sub">契約終期</div>
+									<div class="contract-list__sub">状況</div>
+									<div class="contract-list__sub">PDFの有無</div>
+								</div>
+								<a href="" class="contract-list__item">
+									<div class="contract-list__sub">
+										<p class="contract-list__sub-ttl">契約ID</p>
+										<p class="contract-list__sub-txt">A001</p>
+									</div>
+									<div class="contract-list__sub">
+										<p class="contract-list__sub-ttl">物件名</p>
+										<p class="contract-list__sub-txt">プレシス横浜</p>
+									</div>
+									<div class="contract-list__sub">
+										<p class="contract-list__sub-ttl">部屋番号</p>
+										<p class="contract-list__sub-txt">T001</p>
+									</div>
+									<div class="contract-list__sub">
+										<p class="contract-list__sub-ttl">契約者名</p>
+										<p class="contract-list__sub-txt">新井真吾</p>
+									</div>
+									<div class="contract-list__sub">
+										<p class="contract-list__sub-ttl">所有者名</p>
+										<p class="contract-list__sub-txt">株式会社　グリーンインベスト　代表取締役　大塚雄一</p>
+									</div>
+									<div class="contract-list__sub">
+										<p class="contract-list__sub-ttl">契約始期</p>
+										<p class="contract-list__sub-txt">2020/11/11</p>
+									</div>
+									<div class="contract-list__sub">
+										<p class="contract-list__sub-ttl">契約終期</p>
+										<p class="contract-list__sub-txt">2026/9/30</p>
+									</div>
+									<div class="contract-list__sub">
+										<p class="contract-list__sub-ttl">状況</p>
+										<p class="contract-list__sub-txt">契約中</p>
+									</div>
+									<div class="contract-list__sub">
+										<p class="contract-list__sub-ttl">PDFの有無</p>
+										<p class="contract-list__sub-txt">あり</p>
+									</div>
+								</a>
+							</div>
 						</div>
 						<div class="customer-content__info">
 							<div class="customer-content__info-news">

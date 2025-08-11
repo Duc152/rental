@@ -106,12 +106,10 @@ Component
 		font-weight: bold;
 		@include font-size(24);
 		margin-bottom: 28px;
-		@include mq(tb) {
-			padding-top: 12px;
-		}
 		@include mq {
 			text-align: center;
 			@include font-size(16);
+			padding-top: 12px;
 			margin-bottom: 14px;
 		}
 		a {

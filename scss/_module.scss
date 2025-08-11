@@ -26,6 +26,9 @@ Layout
 	color: #9E9E9E;
 	@include font-size(14);
 	margin-bottom: 27px;
+	@include mq(tb) {
+		padding-top: 12px;
+	}
 	@include mq {
 		display: none;
 	}
@@ -685,6 +688,12 @@ Layout
 				}
 			}
 		}
+		a {
+			display: block;
+			&:hover {
+				opacity: 1;
+			}
+		}
 	}
 }
 
@@ -724,6 +733,20 @@ Layout
 		}
 		@include mq {
 			width: calc(100% - 100px);
+		}
+	}
+}
+
+.block-head {
+	position: relative;
+	margin-bottom: -2px;
+	@include mq {
+		margin-bottom: 16px;
+	}
+	.list-tab {
+		@include mq(md-min) {
+			top: -9px;
+			@include h-align;
 		}
 	}
 }

@@ -2,14 +2,14 @@
 	<a href="<%= RELATIVE_PATH %>" class="header-logo"><img src="<%= RELATIVE_PATH %>img/common/logo.png" alt="AXIDEA"></a>
 	<nav class="header-nav">
 		<div class="header-nav__menu link-popup">
-			<a href="/contract/" <% if(pageData.template !== 'login'){ %>class="active"<% } %>>
+			<a href="/contract/" <% if(pageData.template == 'contract' || pageData.template == 'contract_information'){ %>class="active"<% } %>>
 				<div class="icon">
 					<img width="15" class="show" src="<%= RELATIVE_PATH %>img/common/icon-contract.svg" alt="契約管理">
 					<img width="15" class="off" src="<%= RELATIVE_PATH %>img/common/icon-contract-active.svg" alt="契約管理">
 				</div>
 				契約管理
 			</a>
-			<a href="/customer/">
+			<a href="/customer/" <% if(pageData.template == 'customer' || pageData.template == 'customer_information'){ %>class="active"<% } %>>
 				<div class="icon">
 					<img width="20" class="show" src="<%= RELATIVE_PATH %>img/common/icon-management.svg" alt="顧客管理">
 					<img width="20" class="off" src="<%= RELATIVE_PATH %>img/common/icon-management-active.svg" alt="顧客管理">
