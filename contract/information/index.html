@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+		<title>Information</title>
+		<meta name="description" content="Information">
+		<meta name="format-detection" content="telephone=no">
+		<link rel="shortcut icon" href="../../favicon.ico">
+		<link type="text/css" rel="stylesheet" href="../../js/slick/slick-theme.css">
+		<link type="text/css" rel="stylesheet" href="../../js/slick/slick.css">
+		<link type="text/css" rel="stylesheet" href="../../css/styles.css">
+	</head>
+	<body>
+		<header id="header">
+			<a href="../../" class="header-logo"><img src="../../img/common/logo.png" alt="AXIDEA"></a>
+			<nav class="header-nav">
+				<div class="header-nav__menu link-popup">
+					<a href="/contract/" class="active">
+						<div class="icon">
+							<img width="15" class="show" src="../../img/common/icon-contract.svg" alt="契約管理">
+							<img width="15" class="off" src="../../img/common/icon-contract-active.svg" alt="契約管理">
+						</div> 契約管理
+					</a>
+					<a href="/customer/">
+						<div class="icon">
+							<img width="20" class="show" src="../../img/common/icon-management.svg" alt="顧客管理">
+							<img width="20" class="off" src="../../img/common/icon-management-active.svg" alt="顧客管理">
+						</div> 顧客管理
+					</a>
+					<a href="#popupData" class="header-nav__menu-data">
+						<div class="icon">
+							<img width="17" class="show" src="../../img/common/icon-data.svg" alt="マスターデータ">
+							<img width="17" class="off" src="../../img/common/icon-data-active.svg" alt="マスターデータ">
+						</div>
+						<span class="pc-tb">マスターデータ</span>
+						<span class="sp-tb">データ</span>
+					</a>
+				</div>
+			</nav>
+			<div class="header-user link-popup">
+				<a href="" class="header-user__info">
+					<div class="header-user__info-img"><img src="../../img/common/avatar-thumb.png" alt="userName様"></div>
+					<div class="header-user__info-txt">userName様</div>
+				</a>
+				<a href="#popupLogout" class="header-user__btn">ログアウト</a>
+			</div>
+			<span class="js-mobile">
+				<span></span>
+			</span>
+		</header>
+		<div class="popup" id="popupLogout">
+			<div class="popup-wrap">
+				<div class="popup-wrap__end popup-stop">
+					<p class="popup-wrap__end-ttl">ログアウトしますか？</p>
+					<div class="popup-wrap__end-btn">
+						<span class="popup-close c-btn__01 c-btn__01--white">キャンセル</span>
+						<a href="" class="c-btn__01">ログアウト</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="popup" id="popupData">
+			<div class="popup-wrap">
+				<ul class="popup-wrap__data popup-stop">
+					<li class="popup-wrap__data-item tab01">
+						<span class="popup-wrap__close popup-close"></span>
+						<p class="popup-wrap__data-ttl">マスターデータ</p>
+						<div class="popup-wrap__data-box">
+							<p class="popup-wrap__data-subttl"> 最新データ <span><span>最終更新時間</span><span>2025.4.1</span></span>
+							</p>
+							<a href="" class="popup-wrap__data-btn">家主基本情報.csv</a>
+							<a href="" class="popup-wrap__data-btn">貸主別物件情報.csv</a>
+							<a href="" class="popup-wrap__data-btn">契約者情報.csv</a>
+							<a href="" class="popup-wrap__data-btn">契約情報一覧.csv</a>
+						</div>
+						<span class="c-btn__01 js-data" data-tab="tab02">データを更新する</span>
+					</li>
+					<li class="popup-wrap__data-item tab02">
+						<span class="popup-wrap__close popup-close"></span>
+						<span class="popup-wrap__data-back js-data" data-tab="tab01"></span>
+						<p class="popup-wrap__data-ttl">マスターデータ</p>
+						<ul class="popup-wrap__data-list">
+							<li class="active">
+								<p>家主情報</p>
+							</li>
+							<li>
+								<p>物件情報</p>
+							</li>
+							<li>
+								<p>契約者情報</p>
+							</li>
+							<li>
+								<p>契約情報</p>
+							</li>
+						</ul>
+						<div class="popup-wrap__data-box">
+							<p class="popup-wrap__data-subttl">家主情報</p>
+							<p>家主基本情報のcsvファイルをアップロードしてください。</p>
+							<a href="" class="c-btn__01">ファイルを選択</a>
+							<div class="popup-wrap__data-change">
+								<a href="" class="popup-wrap__data-btn">家主基本情報.csv</a>
+								<span class="popup-wrap__data-changeBtn"></span>
+							</div>
+						</div>
+						<span class="c-btn__01 js-data" data-tab="tab03">次へ</span>
+					</li>
+					<li class="popup-wrap__data-item tab03">
+						<span class="popup-wrap__close popup-close"></span>
+						<span class="popup-wrap__data-back js-data" data-tab="tab02"></span>
+						<p class="popup-wrap__data-ttl">マスターデータ</p>
+						<ul class="popup-wrap__data-list">
+							<li class="active">
+								<p>家主情報</p>
+							</li>
+							<li class="active">
+								<p>物件情報</p>
+							</li>
+							<li>
+								<p>契約者情報</p>
+							</li>
+							<li>
+								<p>契約情報</p>
+							</li>
+						</ul>
+						<div class="popup-wrap__data-box">
+							<p class="popup-wrap__data-subttl">物件情報</p>
+							<p>貸主別物件情報のcsvファイルをアップロードしてください</p>
+							<a href="" class="c-btn__01">ファイルを選択</a>
+						</div>
+						<span class="c-btn__01 js-data" data-tab="tab04">次へ</span>
+					</li>
+					<li class="popup-wrap__data-item tab04">
+						<span class="popup-wrap__close popup-close"></span>
+						<span class="popup-wrap__data-back js-data" data-tab="tab03"></span>
+						<p class="popup-wrap__data-ttl">マスターデータ</p>
+						<ul class="popup-wrap__data-list">
+							<li class="active">
+								<p>家主情報</p>
+							</li>
+							<li class="active">
+								<p>物件情報</p>
+							</li>
+							<li class="active">
+								<p>契約者情報</p>
+							</li>
+							<li>
+								<p>契約情報</p>
+							</li>
+						</ul>
+						<div class="popup-wrap__data-box">
+							<p class="popup-wrap__data-subttl">契約者情報</p>
+							<p>契約者情報一覧のcsvファイルをアップロードしてください。</p>
+							<a href="" class="c-btn__01">ファイルを選択</a>
+						</div>
+						<span class="c-btn__01 js-data" data-tab="tab05">次へ</span>
+					</li>
+					<li class="popup-wrap__data-item tab05">
+						<span class="popup-wrap__close popup-close"></span>
+						<span class="popup-wrap__data-back js-data" data-tab="tab04"></span>
+						<p class="popup-wrap__data-ttl">マスターデータ</p>
+						<ul class="popup-wrap__data-list">
+							<li class="active">
+								<p>家主情報</p>
+							</li>
+							<li class="active">
+								<p>物件情報</p>
+							</li>
+							<li class="active">
+								<p>契約者情報</p>
+							</li>
+							<li class="active">
+								<p>契約情報</p>
+							</li>
+						</ul>
+						<div class="popup-wrap__data-box">
+							<p class="popup-wrap__data-subttl">契約情報</p>
+							<p>契約情報のcsvファイルをアップロードしてください</p>
+							<a href="" class="c-btn__01">ファイルを選択</a>
+						</div>
+						<span class="c-btn__01 js-data" data-tab="tab06">次へ</span>
+					</li>
+					<li class="popup-wrap__data-item tab06">
+						<div class="popup-wrap__end">
+							<p class="popup-wrap__end-ttl">マスターデータを更新しました</p>
+							<span class="popup-close js-data c-btn__01 c-btn__01--white" data-tab="tab01">閉じる</span>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<main id="page-contract_information" class="wrapper">
+			<div class="breadcrumb">
+				<div class="inner">
+					<span><span><a href="/">契約一覧</a></span><span>詳細情報</span></span>
+				</div>
+			</div>
+			<section class="sec-information">
+				<div class="inner">
+					<h1 class="c-ttl__01"><a href="/contract/"></a>詳細情報</h1>
+					<div class="information-wrap">
+						<ul class="list-tab js-tab">
+							<li class="list-tab__item" data-tab="info01">共有資料</li>
+							<li class="list-tab__item" data-tab="info02"><span class="pc-sm">契約</span>基本情報</li>
+							<li class="list-tab__item" data-tab="info03">物件情報</li>
+							<li class="list-tab__item" data-tab="info04">契約者情報</li>
+						</ul>
+						<div class="information-wrap__ct">
+							<div class="information-wrap__ct-item js-tabct info01 link-popup">
+								<form class="information-wrap__search">
+									<input type="text" placeholder="Search" name="search">
+									<button type="submit"></button>
+								</form>
+								<h2 class="information-wrap__ttl pc">共有資料</h2>
+								<ul class="information-wrap__accor">
+									<li class="information-wrap__accor-item">
+										<div class="information-wrap__accor-btn js-accor">送金明細書</div>
+										<div class="information-wrap__accor-ct">
+											<ul class="information-wrap__news">
+												<li class="information-wrap__news-item">
+													<a href="">
+														<p>【6月分物件別送金明細書】  xxxホールディングス株式会社様 _20250521.pdf</p>
+														<span>更新日<time>2025/5/31</time></span>
+													</a>
+													<span class="information-wrap__news-close"></span>
+												</li>
+												<li class="information-wrap__news-item">
+													<a href="">
+														<p>【6月分物件別送金明細書】  xxxホールディングス株式会社様 _20250521.pdf</p>
+														<span>更新日<time>2025/5/31</time></span>
+													</a>
+													<span class="information-wrap__news-close"></span>
+												</li>
+												<li class="information-wrap__news-item information-wrap__news-item--open">
+													<a href="">
+														<p>【6月分物件別送金明細書】  xxxホールディングス株式会社様 _20250521.pdf</p>
+														<span>更新日<time></time></span>
+													</a>
+													<span class="information-wrap__news-close"></span>
+												</li>
+												<li class="information-wrap__news-item information-wrap__news-item--open">
+													<a href="">
+														<p>【6月分物件別送金明細書】  xxxホールディングス株式会社様 _20250521.pdf</p>
+														<span>更新日<time>2025/5/31</time></span>
+													</a>
+													<span class="information-wrap__news-close"></span>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="information-wrap__accor-item">
+										<div class="information-wrap__accor-btn js-accor">契約書</div>
+										<div class="information-wrap__accor-ct">
+											<ul class="information-wrap__news">
+												<li class="information-wrap__news-item">
+													<a href="">
+														<p>【契約書】  xxxホールディングス株式会社様 _20250521.pdf</p>
+														<span>更新日<time>2025/5/31</time></span>
+													</a>
+													<span class="information-wrap__news-close"></span>
+												</li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+								<a href="#popupInfor" class="c-btn__01">アップロード</a>
+							</div>
+							<div class="information-wrap__ct-item js-tabct info02">
+								<ul class="information-list">
+									<li class="information-list__item">
+										<p class="information-list__ttl">契約ID</p>
+										<p class="information-list__txt">A001</p>
+									</li>
+									<li class="information-list__item">
+										<p class="information-list__ttl">契約分類</p>
+										<p class="information-list__txt">普通建物賃貸借契約</p>
+									</li>
+									<li class="information-list__item">
+										<p class="information-list__ttl">契約始期</p>
+										<p class="information-list__txt">2020/11/11</p>
+									</li>
+									<li class="information-list__item">
+										<p class="information-list__ttl">契約終期</p>
+										<p class="information-list__txt">2026/9/30</p>
+									</li>
+									<li class="information-list__item">
+										<p class="information-list__ttl">家賃保証会社名</p>
+										<p class="information-list__txt">エルズサポート株式会社</p>
+									</li>
+									<li class="information-list__item">
+										<p class="information-list__ttl">備考</p>
+										<p class="information-list__txt"></p>
+									</li>
+								</ul>
+							</div>
+							<div class="information-wrap__ct-item js-tabct info03">
+								<ul class="information-wrap__list">
+									<li class="information-list__item">
+										<p class="information-list__ttl">物件名</p>
+										<p class="information-list__txt">プレシス横浜</p>
+									</li>
+									<li class="information-list__item">
+										<p class="information-list__ttl">部屋番号</p>
+										<p class="information-list__txt">T001</p>
+									</li>
+									<li class="information-list__item">
+										<p class="information-list__ttl">所在地</p>
+										<p class="information-list__txt">神奈川県 横浜市西区 高島 ２丁目１４</p>
+									</li>
+									<li class="information-list__item">
+										<p class="information-list__ttl">所有形態</p>
+										<p class="information-list__txt">区分所有</p>
+									</li>
+									<li class="information-list__item">
+										<p class="information-list__ttl">物件分類</p>
+										<p class="information-list__txt">店舗</p>
+									</li>
+									<li class="information-list__item">
+										<p class="information-list__ttl">所有期間</p>
+										<p class="information-list__txt">2022/06/24~</p>
+									</li>
+								</ul>
+							</div>
+							<div class="information-wrap__ct-item js-tabct info04">
+								<ul class="information-wrap__list">
+									<li class="information-list__item">
+										<p class="information-list__ttl">氏名</p>
+										<p class="information-list__txt">新井真吾</p>
+									</li>
+									<li class="information-list__item">
+										<p class="information-list__ttl">氏名（ｶﾅ）</p>
+										<p class="information-list__txt">ｱﾗｲｼﾝｺﾞ</p>
+									</li>
+									<li class="information-list__item">
+										<p class="information-list__ttl">敬称</p>
+										<p class="information-list__txt">様</p>
+									</li>
+									<li class="information-list__item">
+										<p class="information-list__ttl">契約区分</p>
+										<p class="information-list__txt">個人</p>
+									</li>
+									<li class="information-list__item">
+										<p class="information-list__ttl">電話番号</p>
+										<p class="information-list__txt"><a href="tel:08041998686">080-4199-8686</a></p>
+									</li>
+									<li class="information-list__item">
+										<p class="information-list__ttl">メールアドレス</p>
+										<p class="information-list__txt">-</p>
+									</li>
+									<li class="information-list__item">
+										<p class="information-list__ttl">郵便番号</p>
+										<p class="information-list__txt">220-0011</p>
+									</li>
+									<li class="information-list__item">
+										<p class="information-list__ttl">住所</p>
+										<p class="information-list__txt">神奈川県横浜市西区高島2丁目14 プレシス横浜 T001</p>
+									</li>
+									<li class="information-list__item">
+										<p class="information-list__ttl">契約始期</p>
+										<p class="information-list__txt">2020/11/11</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="popup" id="popupInfor">
+				<div class="popup-wrap">
+					<ul class="popup-wrap__data popup-stop">
+						<li class="popup-wrap__data-item news01">
+							<span class="popup-wrap__close popup-close"></span>
+							<p class="popup-wrap__data-ttl">アップロード</p>
+							<div class="popup-wrap__inputfile">
+								<a href="" class="c-btn__01">ファイルを選択</a>
+								<div class="popup-wrap__inputfile-drag">
+									<p>ここにファイルをドラッグ&ドロップ<br>または</p>
+								</div>
+							</div>
+							<div class="popup-wrap__upload">
+								<div class="popup-wrap__upload-select custom-select">
+									<select>
+										<option>保存先を選択</option>
+										<option value="送金明細書">送金明細書</option>
+										<option value="契約書">契約書</option>
+									</select>
+								</div>
+								<div class="popup-wrap__upload-file">
+									<a href="" class="popup-wrap__upload-fileLink">
+										<p>【6月分物件別送金明細書】  xxxホールディングス株式会社様 _20250521.pdf</p>
+									</a>
+									<span class="popup-wrap__upload-fileClose"></span>
+								</div>
+							</div>
+							<div class="popup-wrap__upload">
+								<div class="popup-wrap__upload-select custom-select">
+									<select>
+										<option>保存先を選択</option>
+										<option value="送金明細書">送金明細書</option>
+										<option value="契約書">契約書</option>
+									</select>
+								</div>
+								<div class="popup-wrap__upload-file">
+									<a href="" class="popup-wrap__upload-fileLink">
+										<p>【6月分物件別送金明細書】  xxxホールディングス株式会社様 _20250521.pdf</p>
+									</a>
+									<span class="popup-wrap__upload-fileClose"></span>
+									<p class="error">&#8251;顧客名が一致していません。ファイルの内容を確認してください。</p>
+								</div>
+							</div>
+							<div class="popup-wrap__upload">
+								<div class="popup-wrap__upload-select custom-select">
+									<select>
+										<option>保存先を選択</option>
+										<option value="送金明細書">送金明細書</option>
+										<option value="契約書">契約書</option>
+									</select>
+								</div>
+								<div class="popup-wrap__upload-file">
+									<a href="" class="popup-wrap__upload-fileLink">
+										<p>【6月分物件別送金明細書】  xxxホールディングス株式会社様 _20250521.pdf</p>
+									</a>
+									<span class="popup-wrap__upload-fileClose"></span>
+								</div>
+							</div>
+							<span class="c-btn__01 js-data" data-tab="news02">アップロード</span>
+						</li>
+						<li class="popup-wrap__data-item popup-wrap__data-item--small news02">
+							<span class="popup-wrap__close popup-close"></span>
+							<span class="popup-wrap__data-back js-data" data-tab="news01"></span>
+							<p class="popup-wrap__data-ttl">メッセージ</p>
+							<div class="popup-wrap__message">
+								<textarea maxlength="300"></textarea>
+								<div class="placeholder">メールに記載するメッセージを入力してください。<br>&#8251;メッセージは任意項目です。</div>
+							</div>
+							<span class="c-btn__01 js-data" data-tab="news03">通知メールを送信</span>
+						</li>
+						<li class="popup-wrap__data-item news03">
+							<div class="popup-wrap__end popup-wrap__end--noload">
+								<p class="popup-wrap__end-ttl">通知メールを送信しました</p>
+								<span class="popup-close js-data c-btn__01 c-btn__01--white" data-tab="news01">閉じる</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</main>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="../../js/slick/slick.min.js"></script>
+		<script src="../../js/vendors/jquery.matchHeight-min.js"></script>
+		<script src="../../js/setting.js"></script>
+	</body>
+</html>

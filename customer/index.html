@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+		<title>Customer</title>
+		<meta name="description" content="Customer">
+		<meta name="format-detection" content="telephone=no">
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link type="text/css" rel="stylesheet" href="../js/slick/slick-theme.css">
+		<link type="text/css" rel="stylesheet" href="../js/slick/slick.css">
+		<link type="text/css" rel="stylesheet" href="../css/styles.css">
+	</head>
+	<body>
+		<header id="header">
+			<a href="../" class="header-logo"><img src="../img/common/logo.png" alt="AXIDEA"></a>
+			<nav class="header-nav">
+				<div class="header-nav__menu link-popup">
+					<a href="/contract/" class="active">
+						<div class="icon">
+							<img width="15" class="show" src="../img/common/icon-contract.svg" alt="契約管理">
+							<img width="15" class="off" src="../img/common/icon-contract-active.svg" alt="契約管理">
+						</div> 契約管理
+					</a>
+					<a href="/customer/">
+						<div class="icon">
+							<img width="20" class="show" src="../img/common/icon-management.svg" alt="顧客管理">
+							<img width="20" class="off" src="../img/common/icon-management-active.svg" alt="顧客管理">
+						</div> 顧客管理
+					</a>
+					<a href="#popupData" class="header-nav__menu-data">
+						<div class="icon">
+							<img width="17" class="show" src="../img/common/icon-data.svg" alt="マスターデータ">
+							<img width="17" class="off" src="../img/common/icon-data-active.svg" alt="マスターデータ">
+						</div>
+						<span class="pc-tb">マスターデータ</span>
+						<span class="sp-tb">データ</span>
+					</a>
+				</div>
+			</nav>
+			<div class="header-user link-popup">
+				<a href="" class="header-user__info">
+					<div class="header-user__info-img"><img src="../img/common/avatar-thumb.png" alt="userName様"></div>
+					<div class="header-user__info-txt">userName様</div>
+				</a>
+				<a href="#popupLogout" class="header-user__btn">ログアウト</a>
+			</div>
+			<span class="js-mobile">
+				<span></span>
+			</span>
+		</header>
+		<div class="popup" id="popupLogout">
+			<div class="popup-wrap">
+				<div class="popup-wrap__end popup-stop">
+					<p class="popup-wrap__end-ttl">ログアウトしますか？</p>
+					<div class="popup-wrap__end-btn">
+						<span class="popup-close c-btn__01 c-btn__01--white">キャンセル</span>
+						<a href="" class="c-btn__01">ログアウト</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="popup" id="popupData">
+			<div class="popup-wrap">
+				<ul class="popup-wrap__data popup-stop">
+					<li class="popup-wrap__data-item tab01">
+						<span class="popup-wrap__close popup-close"></span>
+						<p class="popup-wrap__data-ttl">マスターデータ</p>
+						<div class="popup-wrap__data-box">
+							<p class="popup-wrap__data-subttl"> 最新データ <span><span>最終更新時間</span><span>2025.4.1</span></span>
+							</p>
+							<a href="" class="popup-wrap__data-btn">家主基本情報.csv</a>
+							<a href="" class="popup-wrap__data-btn">貸主別物件情報.csv</a>
+							<a href="" class="popup-wrap__data-btn">契約者情報.csv</a>
+							<a href="" class="popup-wrap__data-btn">契約情報一覧.csv</a>
+						</div>
+						<span class="c-btn__01 js-data" data-tab="tab02">データを更新する</span>
+					</li>
+					<li class="popup-wrap__data-item tab02">
+						<span class="popup-wrap__close popup-close"></span>
+						<span class="popup-wrap__data-back js-data" data-tab="tab01"></span>
+						<p class="popup-wrap__data-ttl">マスターデータ</p>
+						<ul class="popup-wrap__data-list">
+							<li class="active">
+								<p>家主情報</p>
+							</li>
+							<li>
+								<p>物件情報</p>
+							</li>
+							<li>
+								<p>契約者情報</p>
+							</li>
+							<li>
+								<p>契約情報</p>
+							</li>
+						</ul>
+						<div class="popup-wrap__data-box">
+							<p class="popup-wrap__data-subttl">家主情報</p>
+							<p>家主基本情報のcsvファイルをアップロードしてください。</p>
+							<a href="" class="c-btn__01">ファイルを選択</a>
+							<div class="popup-wrap__data-change">
+								<a href="" class="popup-wrap__data-btn">家主基本情報.csv</a>
+								<span class="popup-wrap__data-changeBtn"></span>
+							</div>
+						</div>
+						<span class="c-btn__01 js-data" data-tab="tab03">次へ</span>
+					</li>
+					<li class="popup-wrap__data-item tab03">
+						<span class="popup-wrap__close popup-close"></span>
+						<span class="popup-wrap__data-back js-data" data-tab="tab02"></span>
+						<p class="popup-wrap__data-ttl">マスターデータ</p>
+						<ul class="popup-wrap__data-list">
+							<li class="active">
+								<p>家主情報</p>
+							</li>
+							<li class="active">
+								<p>物件情報</p>
+							</li>
+							<li>
+								<p>契約者情報</p>
+							</li>
+							<li>
+								<p>契約情報</p>
+							</li>
+						</ul>
+						<div class="popup-wrap__data-box">
+							<p class="popup-wrap__data-subttl">物件情報</p>
+							<p>貸主別物件情報のcsvファイルをアップロードしてください</p>
+							<a href="" class="c-btn__01">ファイルを選択</a>
+						</div>
+						<span class="c-btn__01 js-data" data-tab="tab04">次へ</span>
+					</li>
+					<li class="popup-wrap__data-item tab04">
+						<span class="popup-wrap__close popup-close"></span>
+						<span class="popup-wrap__data-back js-data" data-tab="tab03"></span>
+						<p class="popup-wrap__data-ttl">マスターデータ</p>
+						<ul class="popup-wrap__data-list">
+							<li class="active">
+								<p>家主情報</p>
+							</li>
+							<li class="active">
+								<p>物件情報</p>
+							</li>
+							<li class="active">
+								<p>契約者情報</p>
+							</li>
+							<li>
+								<p>契約情報</p>
+							</li>
+						</ul>
+						<div class="popup-wrap__data-box">
+							<p class="popup-wrap__data-subttl">契約者情報</p>
+							<p>契約者情報一覧のcsvファイルをアップロードしてください。</p>
+							<a href="" class="c-btn__01">ファイルを選択</a>
+						</div>
+						<span class="c-btn__01 js-data" data-tab="tab05">次へ</span>
+					</li>
+					<li class="popup-wrap__data-item tab05">
+						<span class="popup-wrap__close popup-close"></span>
+						<span class="popup-wrap__data-back js-data" data-tab="tab04"></span>
+						<p class="popup-wrap__data-ttl">マスターデータ</p>
+						<ul class="popup-wrap__data-list">
+							<li class="active">
+								<p>家主情報</p>
+							</li>
+							<li class="active">
+								<p>物件情報</p>
+							</li>
+							<li class="active">
+								<p>契約者情報</p>
+							</li>
+							<li class="active">
+								<p>契約情報</p>
+							</li>
+						</ul>
+						<div class="popup-wrap__data-box">
+							<p class="popup-wrap__data-subttl">契約情報</p>
+							<p>契約情報のcsvファイルをアップロードしてください</p>
+							<a href="" class="c-btn__01">ファイルを選択</a>
+						</div>
+						<span class="c-btn__01 js-data" data-tab="tab06">次へ</span>
+					</li>
+					<li class="popup-wrap__data-item tab06">
+						<div class="popup-wrap__end">
+							<p class="popup-wrap__end-ttl">マスターデータを更新しました</p>
+							<span class="popup-close js-data c-btn__01 c-btn__01--white" data-tab="tab01">閉じる</span>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<main id="page-customer" class="wrapper">
+			<section class="sec-customer">
+				<div class="inner">
+					<h1 class="c-ttl__01 pc">契約一覧</h1>
+					<div class="contract-block">
+						<div class="contract-block__control">
+							<div class="contract-block__control-drop">
+								<div class="contract-block__control-dropBtn"></div>
+								<ul class="list-tab js-tab">
+									<li class="list-tab__item active" data-tab="customer01">オーナー</li>
+									<li class="list-tab__item" data-tab="customer02">テナント</li>
+								</ul>
+							</div>
+							<form class="contract-block__control-search">
+								<input type="text" placeholder="キーワード検索" name="search">
+								<span class="clear-txt"></span>
+								<button type="submit"></button>
+							</form>
+						</div>
+						<div class="customer-tabct">
+							<div class="customer-tabct__item js-tabct active">
+								<div class="contract-list">
+									<div class="contract-list__item contract-list__item--top">
+										<div class="contract-list__sub">顧客ID</div>
+										<div class="contract-list__sub">氏名</div>
+										<div class="contract-list__sub">契約数</div>
+										<div class="contract-list__sub">物件数</div>
+										<div class="contract-list__sub">最終更新日</div>
+										<div class="contract-list__sub">最終ログイン</div>
+										<div class="contract-list__sub">アプリ招待状況</div>
+									</div>
+									<a href="" class="contract-list__item">
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">顧客ID</p>
+											<p class="contract-list__sub-txt">A001</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">氏名</p>
+											<p class="contract-list__sub-txt">株式会社　グリーンインベスト　代表取締役　大塚雄一</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">契約数</p>
+											<p class="contract-list__sub-txt">9</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">物件数</p>
+											<p class="contract-list__sub-txt">1</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">最終更新日</p>
+											<p class="contract-list__sub-txt">2025/6/18</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">最終ログイン</p>
+											<p class="contract-list__sub-txt">2025/6/10</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">アプリ招待状況</p>
+											<p class="contract-list__sub-txt">招待済み</p>
+										</div>
+									</a>
+									<a href="" class="contract-list__item">
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">顧客ID</p>
+											<p class="contract-list__sub-txt">A001</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">氏名</p>
+											<p class="contract-list__sub-txt">株式会社　グリーンインベスト　代表取締役　大塚雄一</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">契約数</p>
+											<p class="contract-list__sub-txt">9</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">物件数</p>
+											<p class="contract-list__sub-txt">1</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">最終更新日</p>
+											<p class="contract-list__sub-txt">2025/6/18</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">最終ログイン</p>
+											<p class="contract-list__sub-txt">2025/6/10</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">アプリ招待状況</p>
+											<p class="contract-list__sub-txt">招待済み</p>
+										</div>
+									</a>
+									<a href="" class="contract-list__item">
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">顧客ID</p>
+											<p class="contract-list__sub-txt">A001</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">氏名</p>
+											<p class="contract-list__sub-txt">株式会社　グリーンインベスト　代表取締役　大塚雄一</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">契約数</p>
+											<p class="contract-list__sub-txt">9</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">物件数</p>
+											<p class="contract-list__sub-txt">1</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">最終更新日</p>
+											<p class="contract-list__sub-txt">2025/6/18</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">最終ログイン</p>
+											<p class="contract-list__sub-txt">2025/6/10</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">アプリ招待状況</p>
+											<p class="contract-list__sub-txt">招待済み</p>
+										</div>
+									</a>
+									<a href="" class="contract-list__item">
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">顧客ID</p>
+											<p class="contract-list__sub-txt">A001</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">氏名</p>
+											<p class="contract-list__sub-txt">株式会社　グリーンインベスト　代表取締役　大塚雄一</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">契約数</p>
+											<p class="contract-list__sub-txt">9</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">物件数</p>
+											<p class="contract-list__sub-txt">1</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">最終更新日</p>
+											<p class="contract-list__sub-txt">2025/6/18</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">最終ログイン</p>
+											<p class="contract-list__sub-txt">2025/6/10</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">アプリ招待状況</p>
+											<p class="contract-list__sub-txt">招待済み</p>
+										</div>
+									</a>
+									<a href="" class="contract-list__item">
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">顧客ID</p>
+											<p class="contract-list__sub-txt">A001</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">氏名</p>
+											<p class="contract-list__sub-txt">株式会社　グリーンインベスト　代表取締役　大塚雄一</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">契約数</p>
+											<p class="contract-list__sub-txt">9</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">物件数</p>
+											<p class="contract-list__sub-txt">1</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">最終更新日</p>
+											<p class="contract-list__sub-txt">2025/6/18</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">最終ログイン</p>
+											<p class="contract-list__sub-txt">2025/6/10</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">アプリ招待状況</p>
+											<p class="contract-list__sub-txt">招待済み</p>
+										</div>
+									</a>
+									<a href="" class="contract-list__item">
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">顧客ID</p>
+											<p class="contract-list__sub-txt">A001</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">氏名</p>
+											<p class="contract-list__sub-txt">株式会社　グリーンインベスト　代表取締役　大塚雄一</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">契約数</p>
+											<p class="contract-list__sub-txt">9</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">物件数</p>
+											<p class="contract-list__sub-txt">1</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">最終更新日</p>
+											<p class="contract-list__sub-txt">2025/6/18</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">最終ログイン</p>
+											<p class="contract-list__sub-txt">2025/6/10</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">アプリ招待状況</p>
+											<p class="contract-list__sub-txt">招待済み</p>
+										</div>
+									</a>
+									<a href="" class="contract-list__item">
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">顧客ID</p>
+											<p class="contract-list__sub-txt">A001</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">氏名</p>
+											<p class="contract-list__sub-txt">株式会社　グリーンインベスト　代表取締役　大塚雄一</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">契約数</p>
+											<p class="contract-list__sub-txt">9</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">物件数</p>
+											<p class="contract-list__sub-txt">1</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">最終更新日</p>
+											<p class="contract-list__sub-txt">2025/6/18</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">最終ログイン</p>
+											<p class="contract-list__sub-txt">2025/6/10</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">アプリ招待状況</p>
+											<p class="contract-list__sub-txt">招待済み</p>
+										</div>
+									</a>
+									<a href="" class="contract-list__item">
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">顧客ID</p>
+											<p class="contract-list__sub-txt">A001</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">氏名</p>
+											<p class="contract-list__sub-txt">株式会社　グリーンインベスト　代表取締役　大塚雄一</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">契約数</p>
+											<p class="contract-list__sub-txt">9</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">物件数</p>
+											<p class="contract-list__sub-txt">1</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">最終更新日</p>
+											<p class="contract-list__sub-txt">2025/6/18</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">最終ログイン</p>
+											<p class="contract-list__sub-txt">2025/6/10</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">アプリ招待状況</p>
+											<p class="contract-list__sub-txt">招待済み</p>
+										</div>
+									</a>
+									<a href="" class="contract-list__item">
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">顧客ID</p>
+											<p class="contract-list__sub-txt">A001</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">氏名</p>
+											<p class="contract-list__sub-txt">株式会社　グリーンインベスト　代表取締役　大塚雄一</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">契約数</p>
+											<p class="contract-list__sub-txt">9</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">物件数</p>
+											<p class="contract-list__sub-txt">1</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">最終更新日</p>
+											<p class="contract-list__sub-txt">2025/6/18</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">最終ログイン</p>
+											<p class="contract-list__sub-txt">2025/6/10</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">アプリ招待状況</p>
+											<p class="contract-list__sub-txt">招待済み</p>
+										</div>
+									</a>
+									<a href="" class="contract-list__item">
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">顧客ID</p>
+											<p class="contract-list__sub-txt">A001</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">氏名</p>
+											<p class="contract-list__sub-txt">株式会社　グリーンインベスト　代表取締役　大塚雄一</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">契約数</p>
+											<p class="contract-list__sub-txt">9</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">物件数</p>
+											<p class="contract-list__sub-txt">1</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">最終更新日</p>
+											<p class="contract-list__sub-txt">2025/6/18</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">最終ログイン</p>
+											<p class="contract-list__sub-txt">2025/6/10</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">アプリ招待状況</p>
+											<p class="contract-list__sub-txt">招待済み</p>
+										</div>
+									</a>
+									<a href="" class="contract-list__item">
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">顧客ID</p>
+											<p class="contract-list__sub-txt">A001</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">氏名</p>
+											<p class="contract-list__sub-txt">株式会社　グリーンインベスト　代表取締役　大塚雄一</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">契約数</p>
+											<p class="contract-list__sub-txt">9</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">物件数</p>
+											<p class="contract-list__sub-txt">1</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">最終更新日</p>
+											<p class="contract-list__sub-txt">2025/6/18</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">最終ログイン</p>
+											<p class="contract-list__sub-txt">2025/6/10</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">アプリ招待状況</p>
+											<p class="contract-list__sub-txt">招待済み</p>
+										</div>
+									</a>
+									<a href="" class="contract-list__item">
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">顧客ID</p>
+											<p class="contract-list__sub-txt">A001</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">氏名</p>
+											<p class="contract-list__sub-txt">株式会社　グリーンインベスト　代表取締役　大塚雄一</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">契約数</p>
+											<p class="contract-list__sub-txt">9</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">物件数</p>
+											<p class="contract-list__sub-txt">1</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">最終更新日</p>
+											<p class="contract-list__sub-txt">2025/6/18</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">最終ログイン</p>
+											<p class="contract-list__sub-txt">2025/6/10</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">アプリ招待状況</p>
+											<p class="contract-list__sub-txt">招待済み</p>
+										</div>
+									</a>
+									<a href="" class="contract-list__item">
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">顧客ID</p>
+											<p class="contract-list__sub-txt">A001</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">氏名</p>
+											<p class="contract-list__sub-txt">株式会社　グリーンインベスト　代表取締役　大塚雄一</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">契約数</p>
+											<p class="contract-list__sub-txt">9</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">物件数</p>
+											<p class="contract-list__sub-txt">1</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">最終更新日</p>
+											<p class="contract-list__sub-txt">2025/6/18</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">最終ログイン</p>
+											<p class="contract-list__sub-txt">2025/6/10</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">アプリ招待状況</p>
+											<p class="contract-list__sub-txt">招待済み</p>
+										</div>
+									</a>
+									<a href="" class="contract-list__item">
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">顧客ID</p>
+											<p class="contract-list__sub-txt">A001</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">氏名</p>
+											<p class="contract-list__sub-txt">株式会社　グリーンインベスト　代表取締役　大塚雄一</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">契約数</p>
+											<p class="contract-list__sub-txt">9</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">物件数</p>
+											<p class="contract-list__sub-txt">1</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">最終更新日</p>
+											<p class="contract-list__sub-txt">2025/6/18</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">最終ログイン</p>
+											<p class="contract-list__sub-txt">2025/6/10</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">アプリ招待状況</p>
+											<p class="contract-list__sub-txt">招待済み</p>
+										</div>
+									</a>
+									<a href="" class="contract-list__item">
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">顧客ID</p>
+											<p class="contract-list__sub-txt">A001</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">氏名</p>
+											<p class="contract-list__sub-txt">株式会社　グリーンインベスト　代表取締役　大塚雄一</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">契約数</p>
+											<p class="contract-list__sub-txt">9</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">物件数</p>
+											<p class="contract-list__sub-txt">1</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">最終更新日</p>
+											<p class="contract-list__sub-txt">2025/6/18</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">最終ログイン</p>
+											<p class="contract-list__sub-txt">2025/6/10</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">アプリ招待状況</p>
+											<p class="contract-list__sub-txt">招待済み</p>
+										</div>
+									</a>
+								</div>
+							</div>
+							<div class="customer-tabct__item js-tabct">
+								<div class="contract-list">
+									<div class="contract-list__item contract-list__item--top">
+										<div class="contract-list__sub">顧客ID</div>
+										<div class="contract-list__sub">氏名</div>
+										<div class="contract-list__sub">契約数</div>
+										<div class="contract-list__sub">物件数</div>
+										<div class="contract-list__sub">最終更新日</div>
+										<div class="contract-list__sub">最終ログイン</div>
+										<div class="contract-list__sub">アプリ招待状況</div>
+									</div>
+									<a href="" class="contract-list__item">
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">顧客ID</p>
+											<p class="contract-list__sub-txt">A001</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">氏名</p>
+											<p class="contract-list__sub-txt">株式会社　グリーンインベスト　代表取締役　大塚雄一</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">契約数</p>
+											<p class="contract-list__sub-txt">9</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">物件数</p>
+											<p class="contract-list__sub-txt">1</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">最終更新日</p>
+											<p class="contract-list__sub-txt">2025/6/18</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">最終ログイン</p>
+											<p class="contract-list__sub-txt">2025/6/10</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">アプリ招待状況</p>
+											<p class="contract-list__sub-txt">招待済み</p>
+										</div>
+									</a>
+									<a href="" class="contract-list__item">
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">顧客ID</p>
+											<p class="contract-list__sub-txt">A001</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">氏名</p>
+											<p class="contract-list__sub-txt">株式会社　グリーンインベスト　代表取締役　大塚雄一</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">契約数</p>
+											<p class="contract-list__sub-txt">9</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">物件数</p>
+											<p class="contract-list__sub-txt">1</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">最終更新日</p>
+											<p class="contract-list__sub-txt">2025/6/18</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">最終ログイン</p>
+											<p class="contract-list__sub-txt">2025/6/10</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">アプリ招待状況</p>
+											<p class="contract-list__sub-txt">招待済み</p>
+										</div>
+									</a>
+									<a href="" class="contract-list__item">
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">顧客ID</p>
+											<p class="contract-list__sub-txt">A001</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">氏名</p>
+											<p class="contract-list__sub-txt">株式会社　グリーンインベスト　代表取締役　大塚雄一</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">契約数</p>
+											<p class="contract-list__sub-txt">9</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">物件数</p>
+											<p class="contract-list__sub-txt">1</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">最終更新日</p>
+											<p class="contract-list__sub-txt">2025/6/18</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">最終ログイン</p>
+											<p class="contract-list__sub-txt">2025/6/10</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">アプリ招待状況</p>
+											<p class="contract-list__sub-txt">招待済み</p>
+										</div>
+									</a>
+									<a href="" class="contract-list__item">
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">顧客ID</p>
+											<p class="contract-list__sub-txt">A001</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">氏名</p>
+											<p class="contract-list__sub-txt">株式会社　グリーンインベスト　代表取締役　大塚雄一</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">契約数</p>
+											<p class="contract-list__sub-txt">9</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">物件数</p>
+											<p class="contract-list__sub-txt">1</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">最終更新日</p>
+											<p class="contract-list__sub-txt">2025/6/18</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">最終ログイン</p>
+											<p class="contract-list__sub-txt">2025/6/10</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">アプリ招待状況</p>
+											<p class="contract-list__sub-txt">招待済み</p>
+										</div>
+									</a>
+									<a href="" class="contract-list__item">
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">顧客ID</p>
+											<p class="contract-list__sub-txt">A001</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">氏名</p>
+											<p class="contract-list__sub-txt">株式会社　グリーンインベスト　代表取締役　大塚雄一</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">契約数</p>
+											<p class="contract-list__sub-txt">9</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">物件数</p>
+											<p class="contract-list__sub-txt">1</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">最終更新日</p>
+											<p class="contract-list__sub-txt">2025/6/18</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">最終ログイン</p>
+											<p class="contract-list__sub-txt">2025/6/10</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">アプリ招待状況</p>
+											<p class="contract-list__sub-txt">招待済み</p>
+										</div>
+									</a>
+									<a href="" class="contract-list__item">
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">顧客ID</p>
+											<p class="contract-list__sub-txt">A001</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">氏名</p>
+											<p class="contract-list__sub-txt">株式会社　グリーンインベスト　代表取締役　大塚雄一</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">契約数</p>
+											<p class="contract-list__sub-txt">9</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">物件数</p>
+											<p class="contract-list__sub-txt">1</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">最終更新日</p>
+											<p class="contract-list__sub-txt">2025/6/18</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">最終ログイン</p>
+											<p class="contract-list__sub-txt">2025/6/10</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">アプリ招待状況</p>
+											<p class="contract-list__sub-txt">招待済み</p>
+										</div>
+									</a>
+									<a href="" class="contract-list__item">
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">顧客ID</p>
+											<p class="contract-list__sub-txt">A001</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">氏名</p>
+											<p class="contract-list__sub-txt">株式会社　グリーンインベスト　代表取締役　大塚雄一</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">契約数</p>
+											<p class="contract-list__sub-txt">9</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">物件数</p>
+											<p class="contract-list__sub-txt">1</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">最終更新日</p>
+											<p class="contract-list__sub-txt">2025/6/18</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">最終ログイン</p>
+											<p class="contract-list__sub-txt">2025/6/10</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">アプリ招待状況</p>
+											<p class="contract-list__sub-txt">招待済み</p>
+										</div>
+									</a>
+									<a href="" class="contract-list__item">
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">顧客ID</p>
+											<p class="contract-list__sub-txt">A001</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">氏名</p>
+											<p class="contract-list__sub-txt">株式会社　グリーンインベスト　代表取締役　大塚雄一</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">契約数</p>
+											<p class="contract-list__sub-txt">9</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">物件数</p>
+											<p class="contract-list__sub-txt">1</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">最終更新日</p>
+											<p class="contract-list__sub-txt">2025/6/18</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">最終ログイン</p>
+											<p class="contract-list__sub-txt">2025/6/10</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">アプリ招待状況</p>
+											<p class="contract-list__sub-txt">招待済み</p>
+										</div>
+									</a>
+									<a href="" class="contract-list__item">
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">顧客ID</p>
+											<p class="contract-list__sub-txt">A001</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">氏名</p>
+											<p class="contract-list__sub-txt">株式会社　グリーンインベスト　代表取締役　大塚雄一</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">契約数</p>
+											<p class="contract-list__sub-txt">9</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">物件数</p>
+											<p class="contract-list__sub-txt">1</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">最終更新日</p>
+											<p class="contract-list__sub-txt">2025/6/18</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">最終ログイン</p>
+											<p class="contract-list__sub-txt">2025/6/10</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">アプリ招待状況</p>
+											<p class="contract-list__sub-txt">招待済み</p>
+										</div>
+									</a>
+									<a href="" class="contract-list__item">
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">顧客ID</p>
+											<p class="contract-list__sub-txt">A001</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">氏名</p>
+											<p class="contract-list__sub-txt">株式会社　グリーンインベスト　代表取締役　大塚雄一</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">契約数</p>
+											<p class="contract-list__sub-txt">9</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">物件数</p>
+											<p class="contract-list__sub-txt">1</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">最終更新日</p>
+											<p class="contract-list__sub-txt">2025/6/18</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">最終ログイン</p>
+											<p class="contract-list__sub-txt">2025/6/10</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">アプリ招待状況</p>
+											<p class="contract-list__sub-txt">招待済み</p>
+										</div>
+									</a>
+									<a href="" class="contract-list__item">
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">顧客ID</p>
+											<p class="contract-list__sub-txt">A001</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">氏名</p>
+											<p class="contract-list__sub-txt">株式会社　グリーンインベスト　代表取締役　大塚雄一</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">契約数</p>
+											<p class="contract-list__sub-txt">9</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">物件数</p>
+											<p class="contract-list__sub-txt">1</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">最終更新日</p>
+											<p class="contract-list__sub-txt">2025/6/18</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">最終ログイン</p>
+											<p class="contract-list__sub-txt">2025/6/10</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">アプリ招待状況</p>
+											<p class="contract-list__sub-txt">招待済み</p>
+										</div>
+									</a>
+									<a href="" class="contract-list__item">
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">顧客ID</p>
+											<p class="contract-list__sub-txt">A001</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">氏名</p>
+											<p class="contract-list__sub-txt">株式会社　グリーンインベスト　代表取締役　大塚雄一</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">契約数</p>
+											<p class="contract-list__sub-txt">9</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">物件数</p>
+											<p class="contract-list__sub-txt">1</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">最終更新日</p>
+											<p class="contract-list__sub-txt">2025/6/18</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">最終ログイン</p>
+											<p class="contract-list__sub-txt">2025/6/10</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">アプリ招待状況</p>
+											<p class="contract-list__sub-txt">招待済み</p>
+										</div>
+									</a>
+									<a href="" class="contract-list__item">
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">顧客ID</p>
+											<p class="contract-list__sub-txt">A001</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">氏名</p>
+											<p class="contract-list__sub-txt">株式会社　グリーンインベスト　代表取締役　大塚雄一</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">契約数</p>
+											<p class="contract-list__sub-txt">9</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">物件数</p>
+											<p class="contract-list__sub-txt">1</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">最終更新日</p>
+											<p class="contract-list__sub-txt">2025/6/18</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">最終ログイン</p>
+											<p class="contract-list__sub-txt">2025/6/10</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">アプリ招待状況</p>
+											<p class="contract-list__sub-txt">招待済み</p>
+										</div>
+									</a>
+									<a href="" class="contract-list__item">
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">顧客ID</p>
+											<p class="contract-list__sub-txt">A001</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">氏名</p>
+											<p class="contract-list__sub-txt">株式会社　グリーンインベスト　代表取締役　大塚雄一</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">契約数</p>
+											<p class="contract-list__sub-txt">9</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">物件数</p>
+											<p class="contract-list__sub-txt">1</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">最終更新日</p>
+											<p class="contract-list__sub-txt">2025/6/18</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">最終ログイン</p>
+											<p class="contract-list__sub-txt">2025/6/10</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">アプリ招待状況</p>
+											<p class="contract-list__sub-txt">招待済み</p>
+										</div>
+									</a>
+									<a href="" class="contract-list__item">
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">顧客ID</p>
+											<p class="contract-list__sub-txt">A001</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">氏名</p>
+											<p class="contract-list__sub-txt">株式会社　グリーンインベスト　代表取締役　大塚雄一</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">契約数</p>
+											<p class="contract-list__sub-txt">9</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">物件数</p>
+											<p class="contract-list__sub-txt">1</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">最終更新日</p>
+											<p class="contract-list__sub-txt">2025/6/18</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">最終ログイン</p>
+											<p class="contract-list__sub-txt">2025/6/10</p>
+										</div>
+										<div class="contract-list__sub">
+											<p class="contract-list__sub-ttl">アプリ招待状況</p>
+											<p class="contract-list__sub-txt">招待済み</p>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="wp-pagination">
+							<div class="wp-pagenavi" role="navigation">
+								<span class="current">1</span>
+								<a href="" class="page">2</a>
+								<a href="" class="page">3</a>
+								<a href="" class="page">4</a>
+								<a href="" class="page">...</a>
+								<a href="" class="page">19</a>
+								<a href="" class="page">20</a>
+								<a href="" class="nextpostslink"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="../js/slick/slick.min.js"></script>
+		<script src="../js/vendors/jquery.matchHeight-min.js"></script>
+		<script src="../js/setting.js"></script>
+	</body>
+</html>

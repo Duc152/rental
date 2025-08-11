@@ -1,0 +1,225 @@
+@use "vars" as *;
+
+.contract-block {
+	@include mq(md-min) {
+		height: calc(100vh - 176px);
+		background: #FBFBFB;
+		box-shadow: 0px 0px 0px 1px #E0E0E0, 0px 1px 3px rgba(0, 0, 0, 0.06);
+		border-radius: 12px;
+		overflow-y: auto;
+		@include mq(tb) {
+			height: calc(100vh - 226px)
+		}
+	}
+	&__control {
+		position: relative;
+		@include flex(end);
+		gap: 16px;
+		padding: 10px 24px;
+		@include mq {
+			padding: 16px 0 8px;
+		}
+		@include mq(md-min) {
+			&:has(.list-tab) {
+				padding: 16px 24px;
+			}
+		}
+		.list-tab {
+			top: 10px;
+			left: 24px;
+		}
+		&-select, &-search {
+			position: relative;
+			height: 40px;
+			background: white;
+			box-shadow: 0px 0px 0px 1px #F4F4F4, 0px 1px 3px rgba(0, 0, 0, 0.06);
+			border-radius: 8px;
+			z-index: 1;
+		}
+		&-select {
+			width: 120px;
+			@include mq {
+				display: none;
+			}
+		}
+		&-search {
+			width: 240px;
+			@include mq {
+				width: 100%;
+			}
+			input {
+				appearance: none;
+				width: 100%;
+				height: 100%;
+				background: unset;
+				border-radius: 8px;
+				border: 2px solid white;
+				@include font-size(14);
+				letter-spacing: 0.3px;
+				padding: 10px 40px 10px 38px;
+				&::placeholder {
+					color: #9E9E9E;
+				}
+				&:focus {
+					border-color: #FF992B;
+					~ .clear-txt {
+						opacity: 1;
+						z-index: 1;
+					}
+				}
+			}
+			.clear-txt {
+				position: absolute;
+				width: 20px;
+				height: 20px;
+				background: url(../img/common/icon-close-black.svg) center no-repeat;
+				background-size: 10px 10px;
+				top: 10px;
+				right: 10px;
+				cursor: pointer;
+				opacity: 0;
+				z-index: -1;
+				transition: 0.3s ease;
+			}
+			button {
+				position: absolute;
+				width: 14px;
+				height: 14px;
+				background: url(../img/common/icon-search.svg) center no-repeat;
+				background-size: contain;
+				border: 0;
+				border-radius: 0;
+				top: 13px;
+				left: 13px;
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+.contract-list {
+	@include mq(md-min) {
+		min-height: calc(100vh - 306px);
+	}
+	@include mq {
+		&--hiddenid {
+			.contract-list__sub {
+				&:first-child {
+					display: none;
+				}
+			}
+		}
+	}
+	&__item {
+		display: block;
+		@include font-size(14);
+		@include mq(xl) {
+			@include mq(md-min) {
+				@include font-size(11);
+			}
+		}
+		@include mq(md-min) {
+			@include flex();
+			border-bottom: 1px solid #E0E0E0;
+			&:first-child {
+				border-top: 1px solid #E0E0E0;
+			}
+		}
+		@include mq {
+			position: relative;
+			background: white;
+			box-shadow: 0px 0px 0px 1px #F4F4F4, 0px 1px 3px rgba(0, 0, 0, 0.06);
+			border-radius: 8px;
+			border: 2px solid white;
+			padding: 17px 36px 15px 14px;
+			&::after {
+				content: "";
+				position: absolute;
+				width: 6px;
+				height: 10px;
+				background: url(../img/common/ar-gray.svg) center no-repeat;
+				background-size: contain;
+				right: 21px;
+				@include v-align;
+			}
+			&:hover {
+				background: #FFF5EA;
+				border-color: #FF992B;
+			}
+			&:focus {
+				background: #FFEBD5;
+				border-color: #FF992B;
+			}
+			&:not(:last-child) {
+				margin-bottom: 9px;
+			}
+		}
+		&--top {
+			background: #F4F4F4;
+			@include mq {
+				display: none;
+			}
+			.contract-list__sub {
+				@include mq(xl) {
+					padding: 6px 16px 5px;
+				}
+				&::before {
+					content: "";
+					position: absolute;
+					width: 11px;
+					height: 13px;
+					background: url(../img/common/icon-swap.svg) center no-repeat;
+					background-size: contain;
+					top: 11px;
+					right: 11px;
+					@include mq(xl) {
+						right: 5px;
+					}
+				}
+			}
+		}
+	}
+	&__sub {
+		position: relative;
+		@include flex(center, center);
+		@include mq(md-min) {
+			flex: 1 1;
+			height: 35px;
+			padding: 6px 9px 5px;
+		}
+		&:not(:last-child) {
+			@include mq(md-min) {
+				&::after {
+					content: "";
+					position: absolute;
+					width: 1px;
+					height: 16px;
+					background: #C2C2C2;
+					top: 10px;
+					right: 0;
+				}
+			}
+			@include mq {
+				margin-bottom: 8.4px;
+			}
+		}
+		&-ttl {
+			width: 88px;
+			@include mq(md-min) {
+				display: none;
+			}
+		}
+		&-txt {
+			display: -webkit-box;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			-webkit-line-clamp: 1;
+			-webkit-box-orient: vertical;
+			max-height: 22px;
+			@include mq {
+				width: calc(100% - 88px);
+				padding-left: 8px;
+			}
+		}
+	}
+}

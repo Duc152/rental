@@ -1,30 +1,151 @@
 <header id="header">
-	<div class="inner">
-		<a href="<%= RELATIVE_PATH %>" class="header-logo">
-			<img src="<%= RELATIVE_PATH %>img/common/logo.png" alt="img">
+	<a href="<%= RELATIVE_PATH %>" class="header-logo"><img src="<%= RELATIVE_PATH %>img/common/logo.png" alt="AXIDEA"></a>
+	<nav class="header-nav">
+		<div class="header-nav__menu link-popup">
+			<a href="/contract/" <% if(pageData.template !== 'login'){ %>class="active"<% } %>>
+				<div class="icon">
+					<img width="15" class="show" src="<%= RELATIVE_PATH %>img/common/icon-contract.svg" alt="契約管理">
+					<img width="15" class="off" src="<%= RELATIVE_PATH %>img/common/icon-contract-active.svg" alt="契約管理">
+				</div>
+				契約管理
+			</a>
+			<a href="/customer/">
+				<div class="icon">
+					<img width="20" class="show" src="<%= RELATIVE_PATH %>img/common/icon-management.svg" alt="顧客管理">
+					<img width="20" class="off" src="<%= RELATIVE_PATH %>img/common/icon-management-active.svg" alt="顧客管理">
+				</div>
+				顧客管理
+			</a>
+			<a href="#popupData" class="header-nav__menu-data">
+				<div class="icon">
+					<img width="17" class="show" src="<%= RELATIVE_PATH %>img/common/icon-data.svg" alt="マスターデータ">
+					<img width="17" class="off" src="<%= RELATIVE_PATH %>img/common/icon-data-active.svg" alt="マスターデータ">
+				</div>
+				<span class="pc-tb">マスターデータ</span>
+				<span class="sp-tb">データ</span>
+			</a>
+		</div>
+	</nav>
+	<div class="header-user link-popup">
+		<a href="" class="header-user__info">
+			<div class="header-user__info-img"><img src="<%= RELATIVE_PATH %>img/common/avatar-thumb.png" alt="userName様"></div>
+			<div class="header-user__info-txt">userName様</div>
 		</a>
-		<nav class="header-nav">
-			<ul class="header-nav__menu">
-				<li class="header-nav__menu-item">
-					<a href="">Demo</a>
-				</li>
-				<li class="header-nav__menu-item">
-					<a href="">Demo</a>
-				</li>
-				<li class="header-nav__menu-item">
-					<a href="">Demo</a>
-				</li>
-				<li class="header-nav__menu-item">
-					<a href="">Demo</a>
-				</li>
-				<li class="header-nav__menu-item">
-					<a href="">Demo</a>
-				</li>
-			</ul>
-		</nav>
-		<span class="js-mobile">
-			<span></span>
-		</span>
+		<a href="#popupLogout" class="header-user__btn">ログアウト</a>
 	</div>
+	<span class="js-mobile">
+		<span></span>
+	</span>
 </header>
 
+<div class="popup" id="popupLogout">
+	<div class="popup-wrap">
+		<div class="popup-wrap__end popup-stop">
+			<p class="popup-wrap__end-ttl">ログアウトしますか？</p>
+			<div class="popup-wrap__end-btn">
+				<span class="popup-close c-btn__01 c-btn__01--white">キャンセル</span>
+				<a href="" class="c-btn__01">ログアウト</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="popup" id="popupData">
+	<div class="popup-wrap">
+		<ul class="popup-wrap__data popup-stop">
+			<li class="popup-wrap__data-item tab01">
+				<span class="popup-wrap__close popup-close"></span>
+				<p class="popup-wrap__data-ttl">マスターデータ</p>
+				<div class="popup-wrap__data-box">
+					<p class="popup-wrap__data-subttl">
+						最新データ
+						<span><span>最終更新時間</span><span>2025.4.1</span></span>
+					</p>
+					<a href="" class="popup-wrap__data-btn">家主基本情報.csv</a>
+					<a href="" class="popup-wrap__data-btn">貸主別物件情報.csv</a>
+					<a href="" class="popup-wrap__data-btn">契約者情報.csv</a>
+					<a href="" class="popup-wrap__data-btn">契約情報一覧.csv</a>
+				</div>
+				<span class="c-btn__01 js-data" data-tab="tab02">データを更新する</span>
+			</li>
+			<li class="popup-wrap__data-item tab02">
+				<span class="popup-wrap__close popup-close"></span>
+				<span class="popup-wrap__data-back js-data" data-tab="tab01"></span>
+				<p class="popup-wrap__data-ttl">マスターデータ</p>
+				<ul class="popup-wrap__data-list">
+					<li class="active"><p>家主情報</p></li>
+					<li><p>物件情報</p></li>
+					<li><p>契約者情報</p></li>
+					<li><p>契約情報</p></li>
+				</ul>
+				<div class="popup-wrap__data-box">
+					<p class="popup-wrap__data-subttl">家主情報</p>
+					<p>家主基本情報のcsvファイルをアップロードしてください。</p>
+					<a href="" class="c-btn__01">ファイルを選択</a>
+					<div class="popup-wrap__data-change">
+						<a href="" class="popup-wrap__data-btn">家主基本情報.csv</a>
+						<span class="popup-wrap__data-changeBtn"></span>
+					</div>
+				</div>
+				<span class="c-btn__01 js-data" data-tab="tab03">次へ</span>
+			</li>
+			<li class="popup-wrap__data-item tab03">
+				<span class="popup-wrap__close popup-close"></span>
+				<span class="popup-wrap__data-back js-data" data-tab="tab02"></span>
+				<p class="popup-wrap__data-ttl">マスターデータ</p>
+				<ul class="popup-wrap__data-list">
+					<li class="active"><p>家主情報</p></li>
+					<li class="active"><p>物件情報</p></li>
+					<li><p>契約者情報</p></li>
+					<li><p>契約情報</p></li>
+				</ul>
+				<div class="popup-wrap__data-box">
+					<p class="popup-wrap__data-subttl">物件情報</p>
+					<p>貸主別物件情報のcsvファイルをアップロードしてください</p>
+					<a href="" class="c-btn__01">ファイルを選択</a>
+				</div>
+				<span class="c-btn__01 js-data" data-tab="tab04">次へ</span>
+			</li>
+			<li class="popup-wrap__data-item tab04">
+				<span class="popup-wrap__close popup-close"></span>
+				<span class="popup-wrap__data-back js-data" data-tab="tab03"></span>
+				<p class="popup-wrap__data-ttl">マスターデータ</p>
+				<ul class="popup-wrap__data-list">
+					<li class="active"><p>家主情報</p></li>
+					<li class="active"><p>物件情報</p></li>
+					<li class="active"><p>契約者情報</p></li>
+					<li><p>契約情報</p></li>
+				</ul>
+				<div class="popup-wrap__data-box">
+					<p class="popup-wrap__data-subttl">契約者情報</p>
+					<p>契約者情報一覧のcsvファイルをアップロードしてください。</p>
+					<a href="" class="c-btn__01">ファイルを選択</a>
+				</div>
+				<span class="c-btn__01 js-data" data-tab="tab05">次へ</span>
+			</li>
+			<li class="popup-wrap__data-item tab05">
+				<span class="popup-wrap__close popup-close"></span>
+				<span class="popup-wrap__data-back js-data" data-tab="tab04"></span>
+				<p class="popup-wrap__data-ttl">マスターデータ</p>
+				<ul class="popup-wrap__data-list">
+					<li class="active"><p>家主情報</p></li>
+					<li class="active"><p>物件情報</p></li>
+					<li class="active"><p>契約者情報</p></li>
+					<li class="active"><p>契約情報</p></li>
+				</ul>
+				<div class="popup-wrap__data-box">
+					<p class="popup-wrap__data-subttl">契約情報</p>
+					<p>契約情報のcsvファイルをアップロードしてください</p>
+					<a href="" class="c-btn__01">ファイルを選択</a>
+				</div>
+				<span class="c-btn__01 js-data" data-tab="tab06">次へ</span>
+			</li>
+			<li class="popup-wrap__data-item tab06">
+				<div class="popup-wrap__end">
+					<p class="popup-wrap__end-ttl">マスターデータを更新しました</p>
+					<span class="popup-close js-data c-btn__01 c-btn__01--white" data-tab="tab01">閉じる</span>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>

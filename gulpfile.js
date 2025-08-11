@@ -75,16 +75,16 @@ gulp.task("ejs", function (done) {
 			RELATIVE_PATH = "../../../../"
 		}
 		if (bread1 != "") {
-			BREADCRUMBS = '<span><span><a href="/"></a></span> <span>' + bread1 + '</span></span>'
+			BREADCRUMBS = '<span><span><a href="/">契約一覧</a></span> <span>' + bread1 + '</span></span>'
 		}
 		if (bread2 != "") {
-			BREADCRUMBS = '<span><span><a href="/"></a></span> <span><a href="' + bread1_url + '">' + bread1 + '</a></span> <span>' + bread2 + '</span></span>'
+			BREADCRUMBS = '<span><span><a href="/">契約一覧</a></span> <span><a href="' + bread1_url + '">' + bread1 + '</a></span> <span>' + bread2 + '</span></span>'
 		}
 		if (bread3 != "") {
-			BREADCRUMBS = '<span><span><a href="/"></a></span> <span><a href="' + bread1_url + '">' + bread1 + '</a></span> <span><a href="' + bread2_url + '">' + bread2 + '</a></span> <span>' + bread3 + '</span></span>'
+			BREADCRUMBS = '<span><span><a href="/">契約一覧</a></span> <span><a href="' + bread1_url + '">' + bread1 + '</a></span> <span><a href="' + bread2_url + '">' + bread2 + '</a></span> <span>' + bread3 + '</span></span>'
 		}
 		if (bread4 != "") {
-			BREADCRUMBS = '<span><span><a href="/"></a></span> <span><a href="' + bread1_url + '">' + bread1 + '</a></span> <span><a href="' + bread2_url + '">' + bread2 + '</a></span> <span><a href="' + bread3_url + '">' + bread3 + '</a></span> <span>' + bread4 + '</span></span>'
+			BREADCRUMBS = '<span><span><a href="/">契約一覧</a></span> <span><a href="' + bread1_url + '">' + bread1 + '</a></span> <span><a href="' + bread2_url + '">' + bread2 + '</a></span> <span><a href="' + bread3_url + '">' + bread3 + '</a></span> <span>' + bread4 + '</span></span>'
 		}
 		if (parentId4 != "") {
 			parentId1 = parentId1 + "/" + parentId2 + "/" + parentId3 + "/" + parentId4
@@ -134,7 +134,7 @@ gulp.task("sass", function (done) {
 			outputStyle: 'expanded'
 		}))
 		.pipe(autoprefixer({browsers: ['last 3 versions', 'ie >= 10']}))
-		.pipe(cssNano())
+		// .pipe(cssNano())
 		.pipe(sourcemaps.write('./maps'))
 		.pipe(gulp.dest("./css"));
 	done();
