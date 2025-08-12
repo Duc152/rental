@@ -17,6 +17,7 @@
 		gap: 16px;
 		padding: 10px 24px;
 		@include mq {
+			gap: 8px;
 			padding: 16px 0 8px;
 		}
 		@include mq(md-min) {
@@ -28,7 +29,7 @@
 			top: 10px;
 			left: 24px;
 		}
-		&-select, &-search {
+		&-select, &-search, &-dates {
 			position: relative;
 			height: 40px;
 			background: white;
@@ -92,6 +93,124 @@
 				top: 13px;
 				left: 13px;
 				cursor: pointer;
+			}
+		}
+		&-dates {
+			width: 256px;
+			@include mq {
+				display: none;
+				position: absolute;
+				width: 100%;
+				bottom: 0;
+			}
+			&::before {
+				content: "";
+				position: absolute;
+				width: 13px;
+				height: 6px;
+				background: url(../img/common/ar-calendar.svg) center no-repeat;
+				background-size: contain;
+				top: 17px;
+				left: 110px;
+				pointer-events: none;
+			}
+			&::after {
+				content: "";
+				position: absolute;
+				width: 14px;
+				height: 16px;
+				background: url(../img/common/icon-calendar.svg) center no-repeat;
+				background-size: contain;
+				top: 12px;
+				right: 15px;
+				pointer-events: none;
+			}
+			input {
+				appearance: none;
+				width: 100%;
+				height: 100%;
+				background: unset;
+				border: 0;
+				border-radius: 8px;
+				@include font-size(14);
+				padding: 5px 35px 6px 13px;
+				&::placeholder {
+					color: #9E9E9E;
+				}
+			}
+			p {
+				position: absolute;
+				width: max-content;
+				color: #5C5C5C;
+				@include font-size(16);
+				letter-spacing: 0.6px;
+				top: 7px;
+				right: calc(100% + 11px);
+			}
+		}
+		&-drop {
+			@include mq(lg) {
+				position: relative;
+				width: 100%;
+				max-width: 102px;
+				height: 40px;
+				z-index: 1;
+				@include mq(md-min) {
+					position: absolute;
+					top: 8px;
+					left: 16px;
+				}
+				&Btn {
+					position: relative;
+					@include flex(0, center);
+					width: 100%;
+					height: 100%;
+					background: white;
+					box-shadow: 0px 0px 0px 1px #F4F4F4, 0px 1px 3px rgba(0, 0, 0, 0.06);
+					border-radius: 8px;
+					@include font-size(14);
+					padding: 6px 20px 5px 8px;
+					&::after {
+						content: "";
+						position: absolute;
+						width: 9px;
+						height: 5px;
+						background: url(../img/common/ar-select.svg) center no-repeat;
+						background-size: contain;
+						top: 17px;
+						right: 14px;
+					}
+				}
+				.list-tab {
+					display: none;
+					text-align: center;
+					position: absolute;
+					width: 100%;
+					background: white;
+					box-shadow: 0px 0px 0px 1px #F4F4F4, 0px 1px 3px rgba(0, 0, 0, 0.06);
+					border-radius: 8px;
+					padding: 8px;
+					margin: 0;
+					top: calc(100% + 8px);
+					left: 0;
+					cursor: pointer;
+					z-index: 1;
+					> li {
+						height: auto;
+						background: unset;
+						color: #1F1F1F;
+						box-shadow: unset;
+						font-weight: 400;
+						@include font-size(14);
+						padding: 3px 0 2px;
+						&::before {
+							display: none;
+						}
+						&:not(:last-child) {
+							margin-bottom: 8px;
+						}
+					}
+				}
 			}
 		}
 	}

@@ -169,3 +169,23 @@ $(".js-tab li").click(function () {
 $('.js-accor').on('click', function () {
 	$(this).toggleClass("on").next().slideToggle();
 });
+
+$('input[name="dates"]').daterangepicker({
+	autoUpdateInput: false,
+	locale: {
+		cancelLabel: 'Clear'
+	}
+});
+
+$('input[name="dates"]').on('apply.daterangepicker', function(ev, picker) {
+	$(this).val(picker.startDate.format('MM/DD/YYYY') + '               ' + picker.endDate.format('MM/DD/YYYY'));
+});
+
+if ($(window).width() <= 990) {
+	$(".contract-block__control-drop .list-tab__item").click(function () {
+		var txtData = $(this).html();
+		$(this).closest('.contract-block__control-drop').find(".contract-block__control-dropBtn").html(txtData);
+		$(this).closest('.list-tab').slideUp();
+		$(".contract-block__control-dropBtn").removeClass('on');
+	});
+} 
